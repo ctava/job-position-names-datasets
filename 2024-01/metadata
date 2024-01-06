@@ -1,0 +1,5 @@
+--- 
+format: SequenceTagging
+restricted_access: false
+description: English named-entity recognition.
+name: job-position-names-eng
