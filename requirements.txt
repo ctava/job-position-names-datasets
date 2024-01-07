@@ -1,1 +1,8 @@
-pandas
+datasets==2.16.1
+evaluate==0.4.1
+pandas==2.1.4
+seqeval==1.2.2
+scikit-learn==1.3.2
+transformers==4.36.2
+torch==2.1.2
+wandb==0.16.1
