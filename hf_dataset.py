@@ -14,9 +14,9 @@ _CITATION = """"""
 _DESCRIPTION = """"""
 
 _URL = "https://raw.githubusercontent.com/ctava/job-position-names-datasets/main/2024-01/"
-_TRAINING_FILE = "position_names_train.txt"
-_DEV_FILE = "position_names_validate.txt"
-_TEST_FILE = "position_names_test.txt"
+_TRAINING_FILE = "train.txt"
+_DEV_FILE = "validate.txt"
+_TEST_FILE = "test.txt"
 
 
 class JPNConfig(datasets.BuilderConfig):
@@ -73,7 +73,7 @@ class JPN(datasets.GeneratorBasedBuilder):
 
         return [
             datasets.SplitGenerator(name=datasets.Split.TRAIN, gen_kwargs={"filepath": downloaded_files["train"]}),
-            datasets.SplitGenerator(name=datasets.Split.VALIDATION, gen_kwargs={"filepath": downloaded_files["validate"]}),
+            datasets.SplitGenerator(name=datasets.Split.VALIDATION, gen_kwargs={"filepath": downloaded_files["dev"]}),
             datasets.SplitGenerator(name=datasets.Split.TEST, gen_kwargs={"filepath": downloaded_files["test"]}),
         ]
 

@@ -67,7 +67,7 @@ if __name__ == "__main__":
     # ---------------------------------------------------------------------------------------------------
 
     args = TrainingArguments(
-        f"test-ner",
+        f"jpn202401",
         evaluation_strategy="epoch",
         learning_rate=learning_rate,
         per_device_train_batch_size=batch_size,
@@ -82,7 +82,7 @@ if __name__ == "__main__":
         hf_model,
         args,
         train_dataset=tokenized_datasets["train"],
-        eval_dataset=tokenized_datasets["validate"],
+        eval_dataset=tokenized_datasets["test"],
         data_collator=data_collator,
         tokenizer=hf_preprocessor.tokenizer,
         compute_metrics=lambda p: compute_metrics(p=p, label_list=hf_dataset.labels)

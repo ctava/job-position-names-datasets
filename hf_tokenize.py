@@ -63,6 +63,5 @@ if __name__ == '__main__':
 
     tokenized_datasets = dataset.map(hf_preprocessor.tokenize_and_align_labels, batched=True)
 
-    print("First sample: ", dataset['train'][0])
-
-    print("First tokenized sample: ", tokenized_datasets['train'][0])
+    #print("First sample: ", dataset['train'][0])
+    #print("First tokenized sample: ", tokenized_datasets['train'][0])
