@@ -45,9 +45,9 @@ def compute_metrics(p, label_list):
 
 if __name__ == "__main__":
     model_n_version = "jpn202401"
-    max_epochs = 50
-    learning_rate = 2e-5
-    batch_size = 16
+    max_epochs = 300
+    learning_rate = 2e-10
+    batch_size = 8
     model_root_dir = "."
 
     hf_pretrained_model_checkpoint = "distilbert-base-uncased"

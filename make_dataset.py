@@ -10,7 +10,7 @@ def find(token,array):
     return result
 
 file = "./2024-01/position_names.csv"
-predicate_adverbs = ['python','c#','typescript','golang']
+predicate_adverbs = ['python','c#','typescript','golang','rust','c','c++','javascript','lysp','lua']
 predicate_verbs = ['writes','reads','speaks','presents','talks','tests','checks']
 predicate_nouns = ['code','papers','notebooks','documents','presentations']
 predicate_adjectives = ['.','a','an','and','does','in','not','the','to','yet']
@@ -58,7 +58,7 @@ for i,c in enumerate(column):
             token += d
 
 tokenDict={}
-num_of_records = 50000
+num_of_records = 10000
 for _ in range(num_of_records):
     tokenDict['tag'] = '0'
     pIndex = random.randint(1,len(predicates)-1)
