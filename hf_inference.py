@@ -1,7 +1,7 @@
 import pickle
 from transformers import AutoModelForTokenClassification, AutoTokenizer
 from transformers import pipeline
-text = "A software engineer walked into a library and then took a full stack engineer for coffee."
+text = "A software engineer coded up some software."
 #text="software engineer"
 #text="cto"
 model = AutoModelForTokenClassification.from_pretrained('./jpn202401')

@@ -47,7 +47,7 @@ if __name__ == "__main__":
     model_n_version = "jpn202401"
     max_epochs = 150
     learning_rate = 2e-5
-    batch_size = 8
+    batch_size = 12
     model_root_dir = "."
 
     hf_pretrained_model_checkpoint = "distilbert-base-uncased"

@@ -58,15 +58,18 @@ f = open("./2024-01/position_names_tags_new.txt", "w", encoding="utf-8")
 entity_shortname = "POS"
 for i,t in enumerate(tokens):
     ner_sentence=""
-    ner_tags=""
+    ner_tag=""
     for j,e in enumerate(t["entities"]):
-        ner_sentence += e + " "
+        ner_sentence = e + " "
         if j == 0:
-            ner_tags += "B-"+entity_shortname + " "
+            ner_tag = "B-"+entity_shortname + " "
         else:
-            ner_tags += "I-"+entity_shortname + " "
+            ner_tag = "I-"+entity_shortname + " "
+        f.write(ner_sentence + ner_tag + "\n")
+    ner_sentence=""
+    ner_tag=""
     for k,w in enumerate(t["words"]):
-        ner_sentence += w + " "
-        ner_tags += "O" + " "
-    f.write(ner_sentence + ner_tags + "\n")
+        ner_sentence = w + " "
+        ner_tag = "O" + " "
+        f.write(ner_sentence + ner_tag + "\n")
 f.close()
