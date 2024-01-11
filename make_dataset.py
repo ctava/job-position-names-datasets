@@ -3,7 +3,7 @@ import pandas as pd
 import random
 from sentence import SentenceBuilder
 
-file = "./2024-01/position_names_new_sorted.csv"
+file = "./2024-01/position_names.csv"
 sentence = SentenceBuilder()
 dtype={"Name": "string"}
 df = pd.read_csv(file,dtype=dtype)
