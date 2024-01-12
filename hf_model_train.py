@@ -1,18 +1,10 @@
+import datasets
+from datasets import load_dataset, load_metric, ClassLabel, DownloadConfig
 import numpy as np
-import transformers
+import os
 from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer, AutoTokenizer
 from transformers import DataCollatorForTokenClassification
-from datasets import load_dataset, load_metric
-import os
 from pathlib import Path
-
-import datasets
-from datasets import DownloadConfig
-import os
-from pathlib import Path
-from datasets import load_dataset, ClassLabel, DownloadConfig
-
-from transformers import AutoTokenizer
 from hf_tokenize import HFTokenizer
 from hf_dataset import JPNDataset
 
@@ -47,7 +39,7 @@ if __name__ == "__main__":
     model_n_version = "jpn202401"
     max_epochs = 150
     learning_rate = 2e-5
-    batch_size = 12
+    batch_size = 16
     model_root_dir = "."
 
     hf_pretrained_model_checkpoint = "distilbert-base-uncased"
