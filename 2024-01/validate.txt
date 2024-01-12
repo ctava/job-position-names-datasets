@@ -1,2 +1,7 @@
-clinical research associate thoughtful research utterly B-POS I-POS I-POS O O O 
-social media manager well-organized reads magnificently B-POS I-POS I-POS O O O
+product B-POS 
+lifecycle I-POS 
+management I-POS 
+engineer I-POS 
+trustworthy O 
+collaborate O 
+tenderly O 
