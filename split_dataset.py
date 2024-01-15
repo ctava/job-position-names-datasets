@@ -1,6 +1,6 @@
 import traceback
 try:
-    train_max=3484
+    train_max=22000
     t = open("./2024-01/position_names_tags.txt",'r')
     train = open("./2024-01/train.txt","w")
     test = open("./2024-01/test.txt","w")
