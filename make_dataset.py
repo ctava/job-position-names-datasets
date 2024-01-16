@@ -42,7 +42,7 @@ for i,t in enumerate(titles):
             elif e==6:
                 words.append(random.choice(sentence.get_prepositions()))
             elif e==7:
-                words.append(random.choice(sentence.get_pronouns()))
+                words.append(random.choice(sentence.get_verbs()))
         else:
             entity += c
     token["entities"] = entities
@@ -54,7 +54,7 @@ for i,t in enumerate(titles):
 
 random.shuffle(tokens)
 
-f = open("./2024-01/position_names_tags_new.txt", "w", encoding="utf-8")
+f = open("./2024-01/position_names_tags.txt", "w", encoding="utf-8")
 entity_shortname = "POS"
 for i,t in enumerate(tokens):
     ner_sentence=""
