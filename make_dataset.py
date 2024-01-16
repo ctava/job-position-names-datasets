@@ -32,17 +32,17 @@ for i,t in enumerate(titles):
             entity=""
             e+=1
             if e==2:
-                words.append(random.choice(sentence.get_verbs()))
+                words.append(random.choice(sentence.get_adverbs()))
             elif e==3:
                 words.append(random.choice(sentence.get_adverbs()))
             elif e==4:
-                words.append(random.choice(sentence.get_nouns()))
+                words.append(random.choice(sentence.get_adverbs()))
             elif e==5:
-                words.append(random.choice(sentence.get_conjunctions()))
+                words.append(random.choice(sentence.get_adverbs()))
             elif e==6:
-                words.append(random.choice(sentence.get_prepositions()))
+                words.append(random.choice(sentence.get_adverbs()))
             elif e==7:
-                words.append(random.choice(sentence.get_verbs()))
+                words.append(random.choice(sentence.get_adverbs()))
         else:
             entity += c
     token["entities"] = entities
