@@ -24,7 +24,7 @@ for i,t in enumerate(titles):
             entity=""
             e+=1
             if e==1:
-                words.append(random.choice(sentence.get_adjectives()))
+                words.append(random.choice(sentence.get_adverbs()))
         elif e>0 and (c == " " or j==len(t)-1):
             entity += c
             entity = entity.strip()
