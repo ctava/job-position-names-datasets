@@ -1,10 +1,11 @@
 import pickle
 from transformers import AutoModelForTokenClassification, AutoTokenizer
 from transformers import pipeline
-text = "A software engineer coded up some api."
-model = AutoModelForTokenClassification.from_pretrained('./jpn202401')
-tokenizer = AutoTokenizer.from_pretrained(
-   './jpn202401', model_max_length=512)
-nlp = pipeline("ner", model=model, tokenizer=tokenizer,
-               aggregation_strategy="average")
-print(nlp(text))
+#text = "software engineer loyally"
+#text = "social media analyst scrolls on tiktok"
+#text = "data scientist prepares a classifier"
+text = "nurse draws blood for lab test"
+token_classifier = pipeline(model="chris1tava/position_names", aggregation_strategy="simple")
+sentence = "nurse draws blood for lab test"
+tokens = token_classifier(sentence)
+print(tokens)
